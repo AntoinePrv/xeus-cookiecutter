@@ -75,7 +75,8 @@ namespace {{cookiecutter.cpp_namespace}}
             std::move(pub_data),
             // due to https://github.com/nlohmann/json/issues/2046 
             // we return empty json objects as below
-            nl::json(nl::json::value_t::object)
+            nl::json::object()
+            //nl::json(nl::json::value_t::object)
         );
 
         return xeus::create_successful_reply();
